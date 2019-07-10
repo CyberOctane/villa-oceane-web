@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+    
+    <title>simple parallax</title>
+    
+    <!-- Stylesheet -->
+    <link href="./css/parallax.css" rel="stylesheet" type="text/css">
+    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+    
+</head>
+    
+<body>
+    
+    <!------------------------------------ Body Background -------------------------------------->
+    
+    <div id="backDiv" >
+        <div class="overlay"></div>
+        <video autoplay muted loop id="back_video">
+            <source src="image/Villa-Ocean_Trim.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!------------------------------------ Nav -------------------------------------->
+    
+    <div id="nav">
+        <a href="#villa">THE VILLA</a>
+        <a href="#">ACOMMODATION</a>
+        <a href="#">DINING</a>
+        <a href="#">ACTIVITIES</a>
+    </div> 
+    
+    <!------------------------------------ Landing section -------------------------------------->
+    
+    <div id="landing" class="section fixed-back vw_size">
+        <img id="villa_logo" src="image/logo/villa_oceane_logo-04.svg">
+        <a class="link-btn" href="#">CHECK VACANCY</a> 
+    </div>
+    
+    <!------------------------------------ The villa section -------------------------------------->
+    
+    <div id="villa" class="section">
+        <div class=""></div>
+        <h1>Feel the tropics</h1>
+    </div> 
+    <div id="section3" class="section">
+        <div class="vw_size"></div>
+        <div id="villa_intro">
+        </div>
+        <div class="patch"></div>
+    </div>
+      
+    <div id="cat" class="section">
+    </div>
+    <div id="section4" class="section vw_size">
+        <div id="villa">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+            window.addEventListener('scroll', ()=>{
+                var background = document.getElementById('');
+                var scrollAmount = window.pageYOffset;
+                background.style.backgroundPosition = '0' + ' ' + -scrollAmount*0.3 + 'px'
+            }, false)
+        </script>
+</body>
+</html>
