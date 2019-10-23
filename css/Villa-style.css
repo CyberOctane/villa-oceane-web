@@ -1,0 +1,537 @@
+
+/*------------------- Global styling -------------------*/
+
+/* dark-blue - #24335B */
+/* black - #051133 */
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'playfair display';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 5vw;
+    margin: 0;
+    line-height: 100%;
+    color: #24335B;
+}
+
+h2 {
+    font-family: 'playfair display';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 25px;
+    margin: ;
+    line-height: 100%;
+    color: #24335B;
+}
+
+h4 {
+    font-family: 'source sans pro';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #24335B;
+}
+
+p {
+    font-family: 'source sans pro';
+    color: #24335B;
+}
+
+a {
+    font-family: 'source sans pro';
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #24335B;
+}
+
+hr {
+    width: 100%;
+}
+
+.link-btn {
+    border: #24335B 2px solid;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.link-btn.white {
+    border: #fff 2px solid;
+}
+
+.section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.vw_size {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content {
+    padding: 10%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    opacity: 0;
+}
+
+/*------- Break section -------*/
+
+.break {
+    align-items: center;
+    justify-content: center;
+}
+
+.break h1 {
+    color: floralwhite;
+    font-size: 10vw;
+    opacity: 0.88;
+}
+
+.break-img {
+    position: absolute;
+    z-index: -1;
+    height: 60vh;
+    width: 40vw;
+    border-radius: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+} 
+
+picture img {
+    display: block;
+    width: 100%;
+}
+
+@media(min-width:768px){
+    
+    .break-img {
+        height: 60vh;
+        border-radius: 10vw;
+    }
+    
+    picture img {
+        height: 70vh;
+        width: auto;
+    }
+
+}
+
+/*------------------- Body Background -------------------*/
+
+#backDiv {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#22ddee , transparent);
+    mix-blend-mode: overlay;
+    opacity: 0.28;
+}
+
+.overlay.green {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: #68C182;
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+}
+
+#back_video {
+    position: fixed;
+    top: -20%;
+    z-index: -1;
+}
+
+.backstrip {
+    width: 100%;
+    height: 80vh;
+}
+
+@media(min-width:768px){
+    
+    #back_video {
+        width: 120%;
+    }
+}
+
+/*----------------------- Menu -----------------------*/
+
+#menu {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 0%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu.open {
+    height: 100%;
+}
+
+#menu a {
+    font-family: 'playfair display';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+@media(min-width:768px){
+    
+    #menu {
+        display: none;
+    }
+}
+
+/*----------------------- Nav -----------------------*/
+
+.nav {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.nav a { 
+    padding: 0 2%;
+    color: #24335B
+}
+
+.nav.clear {
+    background-color: transparent;
+}
+
+.nav.clear a {
+    color: floralwhite
+}
+
+.pc-nav {
+    display: none;
+}
+
+.nav .link-btn {
+    display: none;
+}
+
+.nav.clear .link-btn {
+    border: floralwhite 2px solid;
+    padding: 0.5% 1%;
+}
+
+/* menu btn */
+
+#menu-btn {
+    position: absolute;
+    right: 10%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-stroke {
+    height: 2px;
+    width: 20px;
+    border-radius: 0.5px;
+    background-color: red;
+    transition: width 0.2s;
+}
+
+.closed .cross {
+    width: 0px;
+    position: absolute;
+    top: 50%;
+}
+
+.open .burger {
+    width: 0;
+}
+
+.open #cross01 {
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.open #cross02 {
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+
+@media(min-width:768px) {
+    
+    .nav { 
+        height: 10vh;
+    }
+    
+    .nav .link-btn {
+        display: block;
+        position: absolute;
+        right: 10vw;
+        padding: 0.5% 1%;
+    }
+    
+    #menu-btn {
+        display: none;
+    }
+    
+    .pc-nav {
+        display: block;
+    }
+    
+    
+
+}
+
+/*------------------- Landing section -------------------*/
+
+#landing {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+#villa_logo {
+    width: 40vw;
+    margin-bottom: 20%;
+}
+
+#landing a {
+    color: floralwhite;
+}
+
+#vacancyBtn {
+}
+
+#scroll {
+    display: none;
+}
+
+
+@media(min-width:768px){
+    
+    #villa_logo {
+        width: 20vw;
+    }
+    
+    #scroll {
+        position: absolute;
+        bottom: 15%;
+        display: block;
+        width: 20px;
+    }
+    
+    #vacancyBtn {
+        position: absolute;
+        bottom: 30%;
+    }
+
+}
+
+/*------------------- The Villa section -------------------*/
+
+#villa-intro {
+    background-image: url(../image/22_low.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    margin-top: 15%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#villa .image {
+    width: 100%;
+    height: 80vh;
+    margin-top: 50px;
+    background-image: url(../image/82_low.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*------------------- The Suits section -------------------*/
+
+.see-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.see-all hr {
+    width: 30%;
+    margin: 0;
+}
+
+.suit {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.suit h2 {
+    grid-column-start: 1;
+    text-align: left;
+}
+
+.suit-details {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.suit .link-btn {
+    justify-self:end;
+}
+
+@media(min-width:768px){
+    
+    .suit {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .suit-details {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+}
+
+
+/*------------------- Feel the spice -------------------*/
+
+.spice .break-img {
+    height: 60vw;
+    width: 60vw;
+    border-radius: 30vw;
+    background-image: url(../image/feel-the-spice.jpg);
+    background-size: 90%;
+}
+
+/*------------------- Activities section -------------------*/
+
+#activities .container {
+    position: relative;
+    width: 60vw;
+    height: 70vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.surfing {
+    height: 25vh;
+    width: 100%;
+    background-color: #26ADA7;
+    background-image: linear-gradient(to right, #26ADB0, #26ADA7, #26AD9D);
+    padding: 10%;
+}
+
+.surfing h2 {
+    color: floralwhite
+}
+
+.frame {
+    width: 100%;
+    height: 45vh;
+    align-self: center;
+    border: 1px floralwhite solid;
+    display: flex;
+}
+
+@media(min-width:768px) {
+    
+    #activities .container {
+        width: 70vw;
+        height: 50vh;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .surfing {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 25vw;
+        padding: 4%;
+    }
+    
+    .frame {
+        position: absolute;
+        right: 0;
+        width: 45vw;
+        height: 100%;
+    }
+}
+
+
+
+
+
+

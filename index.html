@@ -8,13 +8,14 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
     
-    <title>simple parallax</title>
+    <title>Villa Oceane</title>
     
     <!-- Stylesheet -->
-    <link href="./css/parallax.css" rel="stylesheet" type="text/css">
+    <link href="./css/Villa-style.css" rel="stylesheet" type="text/css">
     
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900i&display=swap" rel="stylesheet">
     
 </head>
     
@@ -24,58 +25,178 @@
     
     <div id="backDiv" >
         <div class="overlay"></div>
+        <div class="overlay green"></div>
         <video autoplay muted loop id="back_video">
             <source src="image/Villa-Ocean_Trim.mp4" type="video/mp4">
         </video>
     </div>
     
+    <!------------------------------------ Menu -------------------------------------->
+    
+    <div id="menu" class="">
+        <a href="#">The Villa</a>
+        <a href="#">Accomodation</a>
+        <a href="#">Dining</a>
+        <a href="#">Activities</a>
+    </div>
+    
     <!------------------------------------ Nav -------------------------------------->
     
-    <div id="nav">
-        <a href="#villa">THE VILLA</a>
-        <a href="#">ACOMMODATION</a>
-        <a href="#">DINING</a>
-        <a href="#">ACTIVITIES</a>
-    </div> 
+    <nav id="land-nav" class="nav clear">
+        <a class="pc-nav" href="villa.html">THE&nbsp;VILLA</a>
+        <a class="pc-nav" href="#">ACOMMODATION</a>
+        <a class="pc-nav" href="#">DINING</a>
+        <a class="pc-nav" href="#">ACTIVITIES</a>
+        <a id="nav-vacancy" class="link-btn" href="#">CHECK&nbsp;VACANCY</a>
+        <a id="menu-btn" class="closed" >
+            <div class="menu-stroke burger"></div>
+            <div class="menu-stroke burger"></div>
+            <div class="menu-stroke burger"></div>
+            <div id="cross01" class="menu-stroke cross"></div>
+            <div id="cross02" class="menu-stroke cross"></div>
+        </a>
+    </nav> 
     
     <!------------------------------------ Landing section -------------------------------------->
     
-    <div id="landing" class="section fixed-back vw_size">
-        <img id="villa_logo" src="image/logo/villa_oceane_logo-04.svg">
-        <a class="link-btn" href="#">CHECK VACANCY</a> 
+    <div id="landing" class="section vw_size">
+        <div id="hero-content">
+            <img id="villa_logo" src="image/logo/villa_oceane_logo-04.svg">
+            <a id="vacancyBtn" class="link-btn white" href="#">CHECK VACANCY</a> 
+            <img id="scroll" src="image/icons/scroll_01.svg">
+        </div>
     </div>
+    
+    <!------------------------------------ Feel the tropics -------------------------------------->
+    
+    <div class="section vw_size break tropics">
+        <h1>Feel the tropics</h1>
+        <div class="break-img">
+            <picture>
+                <source class="picture-image" media="(min-width:768px)" srcset="image/10_low.jpg">
+                <source srcset="image/10_crop_mobile.png">
+                <img src="image/sea.jpg">
+            </picture>
+        </div>
+    </div> 
     
     <!------------------------------------ The villa section -------------------------------------->
     
-    <div id="villa" class="section">
-        <div class=""></div>
-        <h1>Feel the tropics</h1>
-    </div> 
-    <div id="section3" class="section">
-        <div class="vw_size"></div>
-        <div id="villa_intro">
-        </div>
-        <div class="patch"></div>
+    <div id="villa-intro" class="section vw_size">
     </div>
-      
-    <div id="cat" class="section">
-    </div>
-    <div id="section4" class="section vw_size">
-        <div id="villa">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            </p>
+    
+    <div id="villa" class="section vw_size content">
+        <h1>A Luxury Villa<br>in Mirissa</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+        <a id="" class="link-btn" href="#">SEE&nbsp;MORE</a>
+        <div class="image">
         </div>
     </div>
     
-    <script>
-            window.addEventListener('scroll', ()=>{
-                var background = document.getElementById('');
-                var scrollAmount = window.pageYOffset;
-                background.style.backgroundPosition = '0' + ' ' + -scrollAmount*0.3 + 'px'
-            }, false)
-        </script>
+    <!------------------------------------ Boutique Luxury -------------------------------------->
+    
+    <div class="section vw_size break tropics">
+        <h1>Boutique Luxury</h1>
+    </div> 
+    
+    <!------------------------------------ The Suits -------------------------------------->
+        
+    <div id="" class="section vw_size content">
+        <h1>The Suits</h1>
+        <p>
+            Your private space at Villa Oceane is yours to choose. It can be an intimate room for two, the whole villa for a group of blissseekers or — if your idea of perfect is an all-or-nothing kind of thing, where the rapture of seclusion and solitude is what makes the experience—  the entire entire expanse of the villa for yourself. Villa Oceane is a nest of paradisiacal perfection. It’s yours to choose, to make, to dive into. It’s yours to remember.
+
+        </p>
+        <div class="see-all">
+            <hr>
+            <a id="" class="link-btn" href="#">SEE&nbsp;ALL&nbsp;SUITS</a>
+            <hr>
+        </div>
+        <div class="suit">
+            <h2>Double-Deluxe</h2>
+            <div class="suit-details">
+                <h4>detail 01</h4>
+                <h4>detail 02</h4>
+                <h4>detail 03</h4>
+                <h4>detail 04</h4>
+            </div>
+            <a id="" class="link-btn" href="#">BOOK&nbsp;NOW</a>
+        </div>
+        <hr>
+        <div class="suit">
+            <h2>Twin-Deluxe</h2>
+            <div class="suit-details">
+                <h4>detail 01</h4>
+                <h4>detail 02</h4>
+                <h4>detail 03</h4>
+                <h4>detail 04</h4>
+            </div>
+            <a id="" class="link-btn" href="#">BOOK&nbsp;NOW</a>
+        </div>
+        <hr>
+        <div class="suit">
+            <h2>Tripple-Deluxe</h2>
+            <div class="suit-details">
+                <h4>detail 01</h4>
+                <h4>detail 02</h4>
+                <h4>detail 03</h4>
+                <h4>detail 04</h4>
+            </div>
+            <a id="" class="link-btn" href="#">BOOK&nbsp;NOW</a>
+        </div>
+        <hr>
+        <div class="suit">
+            <h2>Suit-Luxury</h2>
+            <div class="suit-details">
+                <h4>detail 01</h4>
+                <h4>detail 02</h4>
+                <h4>detail 03</h4>
+                <h4>detail 04</h4>
+            </div>
+            <a id="" class="link-btn" href="#">BOOK&nbsp;NOW</a>
+        </div>
+    </div>
+    
+    <!------------------------------------ Feel The Spice -------------------------------------->
+    
+    <div class="section vw_size break spice">
+        <h1>Feel The Spice</h1>
+    </div> 
+    
+    <!------------------------------------ Dining Experience -------------------------------------->
+    
+    <div id="villa" class="section vw_size content">
+        <h1>A Relaxable<br>Dining Experience</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+        <a id="" class="link-btn" href="#">SEE&nbsp;THE&nbsp;MENU</a>
+    </div> 
+    
+    <!------------------------------------ Activities -------------------------------------->
+    
+    <div id="activities" class="section vw_size">
+        <div class="container">
+            <div class="frame">
+            </div>
+            <div class="surfing">
+                <h2>Surfing<br>&&nbsp;More</h2>
+                <p>
+                    Whether the surf’s up or not, there are many things that Villa Oceane can string together for the thrill seeker for an incredible escapade. Otherworldly encounters with fantastic beings of the wild, visits to the magical realm under the sea or leisurely play that make you feel wonderfully alive, are all possible parts of your Villa Oceane tale.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!------------------------------------ Check Us -------------------------------------->
+    
+    <div id="check-us" class="section vw_size">
+    </div>
+        
+    <!------------------------------------ End of content -------------------------------------->
+    
+    <script src="js/theme_villa.js"></script> 
 </body>
 </html>
