@@ -18,7 +18,7 @@ h1 {
     font-family: 'playfair display';
     font-style: italic;
     font-weight: 900;
-    font-size: 5vw;
+    font-size: 50px;
     margin: 0;
     line-height: 100%;
     color: #24335B;
@@ -45,6 +45,7 @@ h4 {
 p {
     font-family: 'source sans pro';
     color: #24335B;
+    margin: 40px 0;
 }
 
 a {
@@ -105,12 +106,21 @@ hr {
 .break {
     align-items: center;
     justify-content: center;
+    height: 40vh;
 }
 
 .break h1 {
     color: floralwhite;
     font-size: 10vw;
     opacity: 0.88;
+}
+
+.break h1.shadow {
+    position: absolute;
+    color: floralwhite;
+    font-size: 10vw;
+    opacity: 0.3;
+    text-shadow: 10px 10px 30px #111923
 }
 
 .break-img {
@@ -132,13 +142,25 @@ picture img {
 
 @media(min-width:768px){
     
+    h1 {
+       font-size: 5vw; 
+    }
+    
+    p {
+        margin: 50px;
+    }
+    
+    .break {
+        height: 100vh;
+    }
+    
     .break-img {
         height: 60vh;
         border-radius: 10vw;
     }
     
     picture img {
-        height: 70vh;
+        height: 63vh;
         width: auto;
     }
 
@@ -248,6 +270,13 @@ picture img {
     color: floralwhite
 }
 
+.nav .brand img {
+    width: 120px;
+    position: absolute;
+    left: 10%;
+    transform: translate(0%, -50%);
+}
+
 .pc-nav {
     display: none;
 }
@@ -349,7 +378,7 @@ picture img {
 }
 
 #villa_logo {
-    width: 40vw;
+    width: 50vw;
     margin-bottom: 20%;
 }
 
@@ -385,13 +414,20 @@ picture img {
 
 }
 
+.break.tropics {
+    background-color: #ffdd22;
+}
+
+#tropics-parallax {
+    transform: translate(0%, 0%);
+}
+
 /*------------------- The Villa section -------------------*/
 
 #villa-intro {
     background-image: url(../image/22_low.jpg);
     background-attachment: fixed;
     background-position: bottom;
-    margin-top: 15%;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -469,7 +505,6 @@ picture img {
     height: 60vw;
     width: 60vw;
     border-radius: 30vw;
-    background-image: url(../image/feel-the-spice.jpg);
     background-size: 90%;
 }
 
